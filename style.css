@@ -1,12 +1,146 @@
 * {
-  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: hsl(0, 0%, 100%);
 }
 
-/* Add styles here! */
+header {
+  border-bottom: 8px solid hsl(0, 0%, 60%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+main {
+  background-color: hsl(0, 0%, 40%);
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.max-width-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-chunk {
+  padding: 96px 24px 48px;
+}
+
+.intro-chunk p {
+  padding-bottom: 16px;
+  max-width: 415px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 8px 24px;
+  border-bottom: 8px solid hsl(0, 0%, 60%);
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 800;
+  padding-bottom: 48px;
+}
+
+.indented-heading {
+  width: fit-content;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  padding: 16px 24px 16px 32px;
+  background-color: hsl(45, 100%, 50%);
+  border-bottom: 8px solid hsl(45, 100%, 40%);
+  margin-bottom: 16px;
+  margin-left: -32px;
+}
+
+section.max-width-wrapper {
+  padding: 64px 0 58px;
+}
+
+.card p {
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+
+.intro-chunk p strong {
+  color: hsl(160, 100%, 30%);
+  font-weight: 800;
+}
